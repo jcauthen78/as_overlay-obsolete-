@@ -9,7 +9,7 @@ Used to do the core text overlays, fast and efficient. Available Font Colors lis
 
 Pandas - (https://pandas.pydata.org/docs/getting_started/install.html)<br>
 **pip install pandas**<br>
-Used to read CSV files (and probably JSON?) for live-data in overlays.<br
+Used to read CSV files for live-data in overlays.<br>
 
     
 2 core files modified. The notes & additions are inside the above provided files. These are _**ADDITIONS**_ to the existing files, not full replacements. Replacing the core files with these attached files **WILL BREAK YOUR ALLSKY** <br>
