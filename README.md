@@ -1,7 +1,6 @@
 # Text overlay module for Thomas Jacquin's AllSky project
 
 Required install : 
-
 PythonMagick - (https://www.raspberryconnect.com/raspbian-packages/55-raspbian-python)<br>
 **sudo apt install python3-pythonmagick** _(unsure if sudo is required)_<br>
 Used to do the core text overlays, fast and efficient. Available Font Colors list - (https://imagemagick.org/script/color.php)
@@ -10,4 +9,4 @@ Used to do the core text overlays, fast and efficient. Available Font Colors lis
 **/home/pi/allsky/scripts/config/config.sh<br>
 /home/pi/allsky/scripts/saveImage.sh<br>**
 
-I made a new folder in the /home/pi/allsky/scripts , called **mods**. 
+I made a new folder in the /home/pi/allsky/scripts , called **mods**, where the main overlay.py lives, as well as a CSV file from my temperature logger, so it can be called via the run. 
