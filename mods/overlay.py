@@ -24,7 +24,7 @@ import PythonMagick as Magick
 import pandas as pd  # to parse through CSV log files
 
 
-def addCardinals(): # Working
+def addCardinals():
     c = {
         "N":calcXY(math.pi),
         "W":calcXY(math.pi/2),
@@ -47,12 +47,12 @@ def addCardinals(): # Working
                 pass
     return
 
-def calcXY(angle): # (for cardinals) Working
+def calcXY(angle): # (for cardinals)
     X = cX + ( R * math.sin(dTheta + angle))
     Y = cY + ( R * math.cos(dTheta + angle))
     return { "X": X, "Y": Y }
 
-def bLt(): # Working
+def bLt(): # All Optional
     xPos=20                                         # Over from right
     yPos=(h*0.85)                                   # Down from top
     fontPoint=(h*0.014)                             # dynamic font size (height multiply by #)
@@ -61,31 +61,28 @@ def bLt(): # Working
     img.strokeColor(Magick.Color('slateblue'))      # Font Stroke color for Bot Lt text
 
     botLt_fields=[
-            { "out": " Jim Cauthen"                 },
-            { "out": " Boise, Idaho"                },
-            { "out": " 116.3W, 43.5N"               },
+            { "out": " Your Name"                   },
+            { "out": " City, State"                 },
+            { "out": " LAT & LONG"                  },
             { "out": " AllSky v0.8"                 },
             { "out": " Raspberry Pi 4b, 8gb"        },
             { "out": " ASI 178MC"                   },
-            { "out": " jimsallsky@gmail.com"        },
-            { "out": " jimsnerdstuff.com/allsky/"   },
-            # {},
-            # { "out": " Wind: {0: 5.1f} mph",       "value": "windspeedmph" },
-            	# d.text((10,1700), "jimsallsky@gmail.com", font=fnt00, fill=(169,169,169,175))
-            	# d.text((10,1730), "www.jimsnerdstuff.com/allsky/", font=fnt00, fill=(169,169,169,175))
+            { "out": " Contact Info"                },
+            { "out": " Contact Info 2 if wanted"    },
+            # {},           # Spacer line incase you want more    
             ]
 
     for field in botLt_fields:
         try:
-            img.draw( Magick.DrawableText(xPos,yPos, field['out']))#.format(wxdata[field['value']])))
+            img.draw( Magick.DrawableText(xPos,yPos, field['out']))
         except:
             try:
-              img.draw( Magick.DrawableText(xPos,yPos, field['out']))#.format(wxdata[field['value']])))
+              img.draw( Magick.DrawableText(xPos,yPos, field['out']))
             except:
                 pass
         yPos+=fontPoint*1.3333
 
-def wx(): # Bottom Right Weather Working
+def wx(): # Bottom Right Weather
     xPos=(w*0.83)                                           # Over from right, in width percent
     yPos=(h*0.89)                                           # Down from top, in height percent
     fontPoint=(h*0.014)                                     # Font size, in height percent
