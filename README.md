@@ -1,5 +1,7 @@
 # Text overlay module for Thomas Jacquin's AllSky project
 
+![Overlay Image](https://github.com/jcauthen78/as_overlay/blob/1567cadf570bfb3f25462e8793f0786d50d8faea/allSky_overlay.jpg)
+
 Required install : 
 PythonMagick - (https://www.raspberryconnect.com/raspbian-packages/55-raspbian-python)<br>
 **sudo apt install python3-pythonmagick** _(unsure if sudo is required)_<br>
